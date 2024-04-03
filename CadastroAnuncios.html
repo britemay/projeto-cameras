@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style> 
+    * {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.titulo {
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white; 
+}
+
+.links {
+  justify-content: space-around;
+  display: flex;
+  background-color: #008669;
+}
+
+.links a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.rodape { 
+  padding: 20px;
+  text-align: center ;
+  background: #ddd;
+}
+
+.foto { 
+  background-color: black;
+  display: inline-block;
+  background-image: url("camerafoto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+} 
+
+.foto img{
+  display: block;
+}
+  
+.text01 {
+  text-decoration-color: #ddd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.text01 h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.text01 p {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(46, 46, 46);
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  margin: 10px;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+
+.flex-container h4 {
+  font-size: 40px;
+}
+
+.flex-container p {
+  font-size: 20px;
+
+}
+
+.anuncio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.anuncio img {
+  max-width: 50%;
+  height: auto;
+  margin: 0px 15px 0px 0px;
+  
+}
+
+.div-texto1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1;
+  text-align: justify;
+}
+
+.div-texto2 {
+  font-size: 20px;
+  line-height: 1;
+  text-align: justify;
+}
+
+.botao-voltar {
+  justify-content: center;
+  font-size: 15px;
+  background-color: #008669;
+  color: #fff;
+  border: black;
+  margin: 10%;
+  padding: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+.botao-detalhes {
+  font-size: 15px;
+  background-color: #008669;
+  color: #fff;
+  border: none;
+  margin: 2%;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+
+    </style>
+
+  <title>CLASSIFICADOS</title>
+
+  <div class="titulo">
+    <h1>CLASSIFICADOS DAS CÂMERAS</h1>
+  </div>
+
+  <div class="links">
+    <a href="PagInicial.html">Página Inicial</a>
+    <a href="Anuncios.html">Anúncios</a>
+    <a href="CadastroAnuncios.html">Cadastro de Anúncios</a>
+    <a href="PaginaAluno.html">Página do Aluno</a>
+  </div>
+
+
+<div class="flex-container">
+  <div class="anuncio">
+    <div>  
+        <form name="FCADASTRO" action="PagInicial.html" method="post">
+        <label form="tnome" class="div-texto2">Nome:</label>
+        <input type="text" id="tnome" maxlength="50" placeholder="Digite seu nome..."/>
+        <label form="tfone" class="div-texto2">Telefone:</label>
+        <input type="tel" id="tfone" size="30" placeholder="Digite seu telefone..."/><br>
+ 
+        <textarea placeholder="Preencha as Informações Básicas:
+
+Marca: 
+Modelo: 
+Linha:  
+Tipo:  
+Resolução da Câmera:  
+Conectividade: 
+Características do Vídeo:  
+Descrição: 
+        " cols="70" rows="13" ></textarea><br>
+        <input type="file" id="foto" name="foto"><br>
+        <label form="tvalor" class="div-texto2">Valor:</label>
+        <input type="text" id="tvalor" size="75" maxlength="10" placeholder="Digite o valor. R$ "/>
+
+    </div>
+   
+    <input class="botao-detalhes" type="reset" id="reset" value="Limpar"/>
+    <input class="botao-detalhes" type="submit" id="bgravar" value="Gravar" onclick="alert('Cadastro realizado com sucesso!!!')"/>
+
+
+  </div>
+  <a href="PagInicial.html">
+    <button class="botao-voltar">Voltar</button>
+  </a>
+
+</div>
+
+<div class="rodape">
+</div>
+
+</body>
+</html>
